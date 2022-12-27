@@ -1,16 +1,16 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-export default class DisplayComponent extends Component {
-    render() {
-        console.log(this);
-        return (
-            <>
-                <ul>
-                    {this.props.arr.map((elem, index) => (
-                        <li key={index}>{elem}</li>
-                    ))}
-                </ul>
-            </>
-        );
-    }
-}
+const DisplayComponent = (arr) => {
+    console.log(arr.arr);
+    return (
+        <>
+            <ul>
+                {arr.arr.map((elem, index) => (
+                    <li key={index}>{elem}</li>
+                ))}
+            </ul>
+        </>
+    );
+};
+
+export default DisplayComponent;
